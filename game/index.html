@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dusk Rescue — Bush Pilot Flight Game</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="hud" aria-hidden="true">
+    <div class="hud-panel hud-left">
+      <div class="hud-row"><span class="hud-label">ALT</span><span class="hud-value" id="hud-alt">0</span><span class="hud-unit">FT</span></div>
+      <div class="hud-row"><span class="hud-label">SPD</span><span class="hud-value" id="hud-spd">0</span><span class="hud-unit">KT</span></div>
+      <div class="hud-row"><span class="hud-label">HDG</span><span class="hud-value" id="hud-hdg">000</span><span class="hud-unit">DEG</span></div>
+      <div class="hud-row"><span class="hud-label">V/S</span><span class="hud-value" id="hud-vs">0</span><span class="hud-unit">FPM</span></div>
+    </div>
+    <div class="hud-panel hud-top">
+      <div id="hud-compass"></div>
+      <div id="hud-mission">STRIP 1 OF 6 — FLY THE RING, LAND, PICK UP 4 HIKERS</div>
+    </div>
+    <div class="hud-panel hud-right">
+      <div class="hud-row"><span class="hud-label">FUEL</span><span class="hud-bar"><span id="hud-fuel" style="width:100%"></span></span><span class="hud-value" id="hud-fuel-num">100</span></div>
+      <div class="hud-row"><span class="hud-label">GEAR</span><span class="hud-bar"><span id="hud-gear" style="width:100%"></span></span><span class="hud-value" id="hud-gear-num">100</span></div>
+      <div class="hud-row"><span class="hud-label">DUSK</span><span class="hud-value" id="hud-dusk">6:00</span><span class="hud-unit">LEFT</span></div>
+      <div class="hud-row"><span class="hud-label">SAVED</span><span class="hud-value" id="hud-saved">0/24</span><span class="hud-unit">HIKERS</span></div>
+      <div class="hud-row"><span class="hud-label">SCORE</span><span class="hud-value" id="hud-score">0</span></div>
+    </div>
+    <div class="hud-panel hud-throttle">
+      <div class="hud-label">THROTTLE</div>
+      <div class="throttle-track"><span id="hud-thr" style="height:55%"></span></div>
+      <div class="hud-value" id="hud-thr-num">55%</div>
+    </div>
+  </div>
+  <div id="banner" class="hidden"></div>
+  <div id="title-screen">
+    <h1>DUSK RESCUE</h1>
+    <p class="tagline">Six mountain strips. Twenty-four hikers. One tank of fuel. Night is coming.</p>
+    <p class="controls">ARROWS fly &nbsp;·&nbsp; W / S throttle &nbsp;·&nbsp; F flaps &nbsp;·&nbsp; M mute &nbsp;·&nbsp; R restart</p>
+    <p class="brief">Fly through each amber ring, land gently on the strip, pick up the hikers, and lift off before the fog swallows the valley. Hard landings wear the gear. Empty tanks end the day.</p>
+    <p class="landing-hint">TO LAND: line up on the strip heading, drop below 90 KT, flaps down, and kiss the dirt — under 520 FPM.</p>
+    <button id="start-btn" type="button">TAKE OFF</button>
+  </div>
+  <noscript><p style="position:absolute;inset:0;background:#10151a;color:#fff;display:flex;align-items:center;justify-content:center">Dusk Rescue needs JavaScript to fly.</p></noscript>
+</div>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>

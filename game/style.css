@@ -1,0 +1,62 @@
+/* Dusk Rescue — flat dusk palette, solid panels, no gradients, no blur decoration. */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #10151a; height: 100%; }
+body {
+  font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+  color: #f2ede4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#stage { position: relative; width: 1280px; height: 720px; max-width: 100vw; max-height: 100vh; }
+#game { display: block; width: 100%; height: 100%; background: #1a2a3a; }
+#hud { position: absolute; inset: 0; pointer-events: none; }
+.hud-panel {
+  position: absolute;
+  background: #10151a;
+  border: 2px solid #f5a623;
+  padding: 10px 12px;
+}
+.hud-left { top: 14px; left: 14px; min-width: 210px; }
+.hud-top { top: 14px; left: 50%; transform: translateX(-50%); width: 560px; text-align: center; }
+.hud-right { top: 14px; right: 14px; min-width: 230px; }
+.hud-throttle { bottom: 14px; left: 14px; text-align: center; padding: 8px 10px; }
+.hud-row { display: flex; align-items: baseline; gap: 8px; margin: 2px 0; }
+.hud-label { font-size: 12px; font-weight: 700; letter-spacing: 2px; color: #f5a623; width: 58px; }
+.hud-value { font-size: 26px; font-weight: 700; color: #ffffff; font-variant-numeric: tabular-nums; }
+.hud-unit { font-size: 11px; font-weight: 700; color: #c9c2b4; letter-spacing: 1px; }
+.hud-bar { flex: 1; height: 12px; background: #2a343d; border: 1px solid #f2ede4; }
+.hud-bar span { display: block; height: 100%; background: #f5a623; }
+#hud-gear { background: #7fb069; }
+#hud-compass {
+  font-size: 15px; font-weight: 700; letter-spacing: 4px; color: #ffffff;
+  border-bottom: 1px solid #f5a623; padding-bottom: 4px; margin-bottom: 6px;
+}
+#hud-mission { font-size: 14px; font-weight: 700; color: #ffd98a; letter-spacing: 1px; }
+.throttle-track { width: 22px; height: 110px; background: #2a343d; border: 1px solid #f2ede4; margin: 6px auto; position: relative; }
+.throttle-track span { position: absolute; bottom: 0; left: 0; width: 100%; background: #f5a623; }
+#banner {
+  position: absolute; top: 42%; left: 50%; transform: translate(-50%, -50%);
+  background: #10151a; border: 3px solid #f5a623; color: #ffffff;
+  font-size: 30px; font-weight: 700; letter-spacing: 2px; padding: 16px 28px; text-align: center;
+}
+#banner small { display: block; font-size: 16px; color: #ffd98a; margin-top: 6px; letter-spacing: 0.5px; }
+.hidden { display: none !important; }
+#title-screen {
+  position: absolute; inset: 0; background: #10151a;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; padding: 40px; gap: 14px;
+}
+#title-screen h1 { font-size: 72px; letter-spacing: 8px; color: #f5a623; }
+#title-screen .tagline { font-size: 20px; color: #ffffff; font-weight: 700; }
+#title-screen .controls { font-size: 16px; color: #ffd98a; font-weight: 700; letter-spacing: 0.5px; }
+#title-screen .brief { font-size: 16px; color: #d8d2c4; max-width: 620px; line-height: 1.5; }
+#start-btn {
+  margin-top: 10px; font-family: inherit; font-size: 22px; font-weight: 700; letter-spacing: 3px;
+  color: #10151a; background: #f5a623; border: 2px solid #f5a623; padding: 14px 42px; cursor: pointer;
+}
+#start-btn:hover { background: #ffc95e; border-color: #ffc95e; }
+#start-btn:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
+#title-screen .landing-hint { font-size: 15px; color: #ffffff; font-weight: 700; max-width: 620px; line-height: 1.5; }
+::selection { background: #f5a623; color: #10151a; }
